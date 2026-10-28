@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- ══════════════════════════════════════════════════════════════
+     KMMKS Manager — public front door (GitHub Pages)
+     This repo (shinenair/KMMKS-site, PUBLIC) contains ONLY this page.
+     The program itself lives in the private repo shinenair/KMMKS and runs
+     as a Google Apps Script web app; this page shows it full-screen.
+     Nothing can be seen without signing in to KMMKS.
+
+     ►► IF A NEW APPS SCRIPT DEPLOYMENT IS EVER MADE (new /exec URL),
+        change the ONE line marked "APP URL" below. ◄◄
+     ══════════════════════════════════════════════════════════════ -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>KMMKS Manager — Karuvammola Madhavan Pillai Memorial Kudumba Sangamam</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23000'/%3E%3Ccircle cx='50' cy='50' r='38' fill='none' stroke='%23ffe500' stroke-width='7' stroke-dasharray='5 5'/%3E%3Ctext x='50' y='59' text-anchor='middle' font-family='Arial' font-weight='800' font-size='24' fill='%23ffe500'%3EK%3C/text%3E%3C/svg%3E">
+  <style>
+    html, body { margin: 0; padding: 0; height: 100%; background: #000; }
+    iframe#app { position: fixed; inset: 0; width: 100%; height: 100%; border: none; }
+    /* Loading screen: visible until the program arrives */
+    #loader { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px;
+              background: #000; color: #bbb; font-family: Arial, Helvetica, sans-serif; font-size: 14px; transition: opacity .4s ease; text-align: center; padding: 16px; }
+    #loader.done { opacity: 0; pointer-events: none; }
+    #loader .t1 { color: #ff3b30; font-weight: 800; font-size: 20px; }
+    #loader .t2 { color: #ff9f1a; font-weight: 800; letter-spacing: 1px; }
+    .ring { width: 64px; height: 64px; border: 4px dotted #ffe500; border-radius: 50%; animation: spin 1.6s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+  </style>
+</head>
+<body>
+  <div id="loader">
+    <div class="ring"></div>
+    <div class="t1">Karuvammola Madhavan Pillai Memorial Kudumba Sangamam</div>
+    <div class="t2">KMMKS - MANAGER</div>
+    <div>Loading…</div>
+  </div>
+
+  <!-- ▼▼▼ APP URL — the only line to change after a new deployment ▼▼▼ -->
+  <iframe id="app" allow="clipboard-write; camera"
+    src="https://script.google.com/macros/s/AKfycbxxpl_3DMHqR-U6MN9sIjfWpOSDStlA-p8t9yYMupj6BQsy99wBOQnLg3OMZODTBCWH4w/exec"
+    onload="document.getElementById('loader').classList.add('done')"></iframe>
+  <!-- ▲▲▲ APP URL ▲▲▲ -->
+</body>
+</html>
